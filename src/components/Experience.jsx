@@ -9,13 +9,14 @@ export default function Experience() {
       </div>
 
       <div className="timeline">
-        {experiences.map((experience) => (
+        {experiences.map((experience, index) => (
           <article className="timelineItem" key={`${experience.company}-${experience.timeline}`}>
             <div className="timelineMeta">
+              <span className="timelineIndex">0{index + 1}</span>
               <span>{experience.timeline}</span>
               <span>{experience.location}</span>
             </div>
-            <div className="timelineCard">
+            <div className="timelineCard depthCard">
               <p className="company">{experience.company}</p>
               <h3>{experience.role}</h3>
               <ul>

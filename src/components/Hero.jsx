@@ -6,6 +6,8 @@ const highlights = [
   { value: "GenAI", label: "RAG pipelines and local embeddings" },
 ];
 
+const focusAreas = ["Backend APIs", "Cloud Systems", "GenAI + RAG"];
+
 export default function Hero() {
   return (
     <section className="hero" id="home">
@@ -31,15 +33,44 @@ export default function Hero() {
         </div>
       </div>
 
-      <aside className="heroPanel" aria-label="Professional highlights">
-        <div className="availabilityCard">
-          <span className="statusDot" aria-hidden="true" />
-          <p>Open to backend, full-stack, and AI engineering opportunities</p>
+      <aside className="heroVisual" aria-label="Professional snapshot">
+        <div className="identityCard depthCard">
+          <div className="identityTop">
+            <span className="statusPill">
+              <span className="statusDot" aria-hidden="true" />
+              Open to opportunities
+            </span>
+            <span className="identityMark">FK</span>
+          </div>
+
+          <div className="portraitFrame" aria-hidden="true">
+            <span>FK</span>
+          </div>
+
+          <div className="identityCopy">
+            <p>Open to backend, full-stack, and AI engineering opportunities</p>
+            <div className="focusStack">
+              {focusAreas.map((area) => (
+                <span key={area}>{area}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="consoleCard depthCard" aria-label="Engineering focus">
+          <div className="windowDots" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
+          <code>const focus = ["FastAPI", "React", "RAG"];</code>
+          <code>deploy(target: "reliable systems");</code>
+          <code>optimize(data + user experience);</code>
         </div>
 
         <div className="highlightGrid">
           {highlights.map((highlight) => (
-            <div className="highlightCard" key={highlight.value}>
+            <div className="highlightCard depthCard" key={highlight.value}>
               <strong>{highlight.value}</strong>
               <span>{highlight.label}</span>
             </div>

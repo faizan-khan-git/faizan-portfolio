@@ -8,7 +8,10 @@ export default function Education() {
         <h2>Academic foundation</h2>
       </div>
 
-      <article className="educationCard">
+      <article className="educationCard depthCard">
+        <div className="educationBadge" aria-hidden="true">
+          IIIT
+        </div>
         <div>
           <h3>{education.institute}</h3>
           <p>{education.degree}</p>

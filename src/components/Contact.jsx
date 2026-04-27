@@ -3,7 +3,7 @@ import { profile } from "../data/portfolio.js";
 export default function Contact() {
   return (
     <footer className="contactSection" id="contact">
-      <div>
+      <div className="contactCopy">
         <p className="eyebrow">Contact</p>
         <h2>Ready to contribute to a strong engineering team.</h2>
         <p>
@@ -13,7 +13,7 @@ export default function Contact() {
       </div>
 
       <div className="contactActions">
-        <a className="button buttonPrimary" href={`mailto:${profile.email}`}>
+        <a className="button buttonPrimary contactPrimary" href={`mailto:${profile.email}`}>
           {profile.email}
         </a>
         <a className="button buttonGhost" href={`tel:${profile.phone.replaceAll("-", "")}`}>

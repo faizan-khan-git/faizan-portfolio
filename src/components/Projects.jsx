@@ -10,7 +10,13 @@ export default function Projects() {
 
       <div className="projectGrid">
         {projects.map((project, index) => (
-          <article className={index === 0 ? "projectCard featuredProject" : "projectCard"} key={project.title}>
+          <article
+            className={index === 0 ? "projectCard featuredProject depthCard" : "projectCard depthCard"}
+            key={project.title}
+          >
+            <div className="projectTop">
+              <span>Project 0{index + 1}</span>
+            </div>
             <p className="stack">{project.stack}</p>
             <h3>{project.title}</h3>
             <ul>
